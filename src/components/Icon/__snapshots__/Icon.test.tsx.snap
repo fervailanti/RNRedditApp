@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 1`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Entypo",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 2`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Fontisto",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 3`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "anticon",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 4`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "EvilIcons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 5`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Feather",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 6`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "FontAwesome",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 7`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "fontcustom",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 8`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Ionicons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 9`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Material Design Icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  󰀄
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 10`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Material Icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 11`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Octicons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 12`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "simple-line-icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Components > Icon <Icon {...props} /> should render correctly every type of family 13`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": "#FF4400",
+        "fontSize": 16,
+      },
+      undefined,
+      Object {
+        "fontFamily": "zocial",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;

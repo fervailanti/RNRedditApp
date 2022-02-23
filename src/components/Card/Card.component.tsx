@@ -2,9 +2,9 @@ import { Icon } from '@components'
 import React from 'react'
 import {
   Image,
-  Pressable,
   StyleProp,
   Text,
+  TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native'
@@ -50,7 +50,9 @@ const Card: React.FC<CardProps> = ({
             {!!indicator.label && (
               <Text style={styles.indicatorLabel}>{indicator.label}</Text>
             )}
-            <Text style={styles.indicatorText}>{indicator.text}</Text>
+            <Text numberOfLines={1} style={styles.indicatorText}>
+              {indicator.text}
+            </Text>
           </View>
         )
       })}
@@ -58,7 +60,7 @@ const Card: React.FC<CardProps> = ({
   )
 
   return (
-    <Pressable style={styles.card} onPress={onPress}>
+    <TouchableOpacity style={styles.card} onPress={onPress}>
       {imageUrl && (
         <Image
           resizeMode="cover"
@@ -75,7 +77,7 @@ const Card: React.FC<CardProps> = ({
         )}
         {bottomIndicators && renderIndicators(bottomIndicators, styles.bottom)}
       </View>
-    </Pressable>
+    </TouchableOpacity>
   )
 }
 

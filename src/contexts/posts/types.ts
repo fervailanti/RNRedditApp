@@ -4,6 +4,7 @@ import { ACTION_PAYLOADS } from './actions'
 export type Post = {
   kind: string
   data: {
+    id: string
     permalink: string
     title: string
     thumbnail: string

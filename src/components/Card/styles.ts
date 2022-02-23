@@ -5,8 +5,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'white',
     padding: 12,
-    marginTop: 16,
-    marginHorizontal: 16,
+    marginBottom: 16,
     borderRadius: 8,
     shadowColor: 'black',
     shadowOffset: {

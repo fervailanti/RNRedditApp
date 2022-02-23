@@ -1,2 +1,2 @@
-export { default as PostDetails } from './PostDetails'
-export { default as PostsList } from './PostsList'
+export { default as PostDetailsScreen } from './PostDetails/PostDetails.screen'
+export { default as PostsListScreen } from './PostsList/PostsList.screen'

@@ -2,9 +2,9 @@ import { RootStackType, SCREENS } from '@navigation'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { REDDIT_BASE_URL } from '@utils/constants'
 import React from 'react'
-import { StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { WebView } from 'react-native-webview'
+import { styles } from './styles'
 
 type PostDetailsProps = NativeStackScreenProps<
   RootStackType,
@@ -19,12 +19,5 @@ const PostDetails: React.FC<PostDetailsProps> = ({ route }) => {
     </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-})
 
 export default PostDetails

@@ -1,32 +1,55 @@
+import { Card } from '@components'
 import { PostsContext } from '@contexts/posts'
+import { ACTION_TYPES } from '@contexts/posts/actions'
 import { RootStackType, SCREENS } from '@navigation'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import React, { useContext } from 'react'
-import { Button, ScrollView, Text, useColorScheme } from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+import { endpoints } from '@services/axios'
+import React, { useContext, useEffect, useState } from 'react'
+import { ScrollView, Text } from 'react-native'
 
 type PostsListProps = NativeStackScreenProps<RootStackType, SCREENS.POSTS_LIST>
 
 const PostsList: React.FC<PostsListProps> = ({ navigation }) => {
-  const isDarkMode = useColorScheme() === 'dark'
+  const { state, dispatch } = useContext(PostsContext)
+  const [loading, setLoading] = useState<boolean>(false)
 
-  const { state } = useContext(PostsContext)
+  useEffect(() => {
+    setLoading(true)
+    endpoints
+      .getPosts(state.filter)
+      .then(({ data }) => {
+        dispatch({
+          type: ACTION_TYPES.SET_POSTS,
+          payload: data.data.children,
+        })
+      })
+      .catch(e => console.log(e))
+      .finally(() => setLoading(false))
+  }, [dispatch, state.filter])
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  }
-
-  const goToPostDetails = () => {
-    navigation.navigate(SCREENS.POST_DETAILS, { permalink: 'test' })
+  const goToPostDetails = (permalink: string) => {
+    navigation.navigate(SCREENS.POST_DETAILS, { permalink })
   }
 
   return (
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      style={backgroundStyle}>
+    <ScrollView contentInsetAdjustmentBehavior="automatic">
       <Text>{state.filter}</Text>
-      <Text>{JSON.stringify(state.posts)}</Text>
-      <Button title="Go to Post Details" onPress={goToPostDetails} />
+      {state.posts.map(({ data }, index) => {
+        return (
+          <Card
+            bottomIndicators={[
+              { text: data.author, label: '@' },
+              { text: data.score, label: 'S' },
+              { text: data.num_comments, label: 'C' },
+            ]}
+            imageUrl={data.thumbnail}
+            key={index}
+            title={data.title}
+            topIndicators={[{ text: data.created, label: 'D' }]}
+            onPress={() => goToPostDetails(data.permalink)}
+          />
+        )
+      })}
     </ScrollView>
   )
 }

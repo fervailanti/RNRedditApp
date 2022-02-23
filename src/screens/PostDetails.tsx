@@ -1,8 +1,10 @@
 import { RootStackType, SCREENS } from '@navigation'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { REDDIT_BASE_URL } from '@utils/constants'
 import React from 'react'
-import { ScrollView, Text, useColorScheme } from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+import { StyleSheet } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { WebView } from 'react-native-webview'
 
 type PostDetailsProps = NativeStackScreenProps<
   RootStackType,
@@ -10,19 +12,19 @@ type PostDetailsProps = NativeStackScreenProps<
 >
 
 const PostDetails: React.FC<PostDetailsProps> = ({ route }) => {
-  const isDarkMode = useColorScheme() === 'dark'
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  }
-
+  const uri = `${REDDIT_BASE_URL}${route.params.permalink}`
   return (
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      style={backgroundStyle}>
-      <Text>{route.params.permalink}</Text>
-    </ScrollView>
+    <SafeAreaView edges={['bottom']} style={styles.safeArea}>
+      <WebView source={{ uri }} />
+    </SafeAreaView>
   )
 }
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+})
 
 export default PostDetails

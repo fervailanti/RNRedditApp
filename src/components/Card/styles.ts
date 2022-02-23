@@ -30,12 +30,12 @@ export default StyleSheet.create({
   top: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginBottom: 8,
+    marginBottom: 2,
   },
   bottom: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginTop: 8,
+    marginTop: 2,
   },
   indicatorLast: {
     flexDirection: 'row',

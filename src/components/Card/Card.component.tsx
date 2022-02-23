@@ -1,4 +1,5 @@
 import { Icon } from '@components'
+import { isHttpUrl } from '@utils/helpers'
 import React from 'react'
 import {
   Image,
@@ -59,9 +60,11 @@ const Card: React.FC<CardProps> = ({
     </View>
   )
 
+  const showImage = !!imageUrl && isHttpUrl(imageUrl)
+
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
-      {imageUrl && (
+      {showImage && (
         <Image
           resizeMode="cover"
           source={{ uri: imageUrl }}

@@ -21,10 +21,11 @@ export default StyleSheet.create({
     height: 80,
     width: 80,
     borderRadius: 4,
+    marginRight: 12,
   },
   container: {
     flex: 1,
-    marginLeft: 12,
+    height: 80,
     justifyContent: 'space-between',
   },
   top: {
@@ -62,6 +63,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 14,
+    fontWeight: '500',
     color: colors.black,
   },
   flex: {

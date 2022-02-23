@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { PostDetailsScreen, PostsListScreen } from '@screens'
+import { colors } from '@utils/colors'
 import React from 'react'
 import { RootStackType, SCREENS } from './screens'
 
@@ -11,7 +12,7 @@ const Root: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName={SCREENS.POSTS_LIST}
-        screenOptions={{ headerTintColor: '#FF4400' }}>
+        screenOptions={{ headerTintColor: colors.primary }}>
         <Stack.Screen
           component={PostsListScreen}
           name={SCREENS.POSTS_LIST}

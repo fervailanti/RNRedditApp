@@ -1,4 +1,5 @@
 import { Icon } from '@components'
+import { colors } from '@utils/colors'
 import React from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 import { styles } from './styles'
@@ -11,7 +12,7 @@ type ButtonProps = {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  color = '#FF4400',
+  color = colors.primary,
   icon,
   onPress,
   children,

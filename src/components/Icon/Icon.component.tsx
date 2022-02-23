@@ -1,3 +1,4 @@
+import { colors } from '@utils/colors'
 import React from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { getIconFamily, IconFamily } from './iconFamilies'
@@ -12,7 +13,7 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = ({
   family = 'MaterialCommunityIcons',
-  color = '#999',
+  color = colors.gray.light,
   size = 16,
   style,
   name,

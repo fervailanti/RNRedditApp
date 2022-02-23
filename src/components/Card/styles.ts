@@ -1,13 +1,14 @@
+import { colors } from '@utils/colors'
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
   card: {
     flexDirection: 'row',
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     padding: 12,
     marginBottom: 16,
     borderRadius: 8,
-    shadowColor: 'black',
+    shadowColor: colors.black,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -49,7 +50,7 @@ export default StyleSheet.create({
     fontSize: 12,
     marginRight: 2,
     fontWeight: 'bold',
-    color: '#999',
+    color: colors.gray.light,
   },
   indicatorIcon: {
     marginRight: 2,
@@ -57,7 +58,7 @@ export default StyleSheet.create({
   indicatorText: {
     fontWeight: 'normal',
     fontSize: 12,
-    color: '#999',
+    color: colors.gray.light,
   },
   title: {
     fontSize: 14,

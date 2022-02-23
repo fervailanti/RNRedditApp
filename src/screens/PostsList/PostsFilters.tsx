@@ -2,6 +2,7 @@ import { Button } from '@components'
 import { PostsContext } from '@contexts/posts'
 import { ACTION_TYPES } from '@contexts/posts/actions'
 import { PostsFilter } from '@contexts/posts/types'
+import { colors } from '@utils/colors'
 import { REDDIT_POST_FILTERS } from '@utils/constants'
 import React, { useContext } from 'react'
 import { View } from 'react-native'
@@ -20,7 +21,7 @@ const PostsFilters: React.FC = () => {
         const isActive = state.filter === key
         return (
           <Button
-            color={isActive ? '#FF4400' : '#666'}
+            color={isActive ? colors.primary : colors.gray.dark}
             icon={icon}
             key={key}
             onPress={() => handleChange(key)}>

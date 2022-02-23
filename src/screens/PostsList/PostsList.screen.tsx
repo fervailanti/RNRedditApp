@@ -5,6 +5,7 @@ import { Post } from '@contexts/posts/types'
 import { RootStackType, SCREENS } from '@navigation'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { endpoints } from '@services/axios'
+import { colors } from '@utils/colors'
 import { REFRESH_OFFSET_VARIANTS } from '@utils/constants'
 import { formatAge } from '@utils/helpers'
 import React, { useCallback, useContext, useEffect, useState } from 'react'
@@ -77,11 +78,11 @@ const PostsList: React.FC<PostsListProps> = ({ navigation }) => {
       keyExtractor={item => item.data.id}
       refreshControl={
         <RefreshControl
-          colors={['#FF4400']}
+          colors={[colors.primary]}
           progressViewOffset={refreshOffset}
           refreshing={loading}
-          tintColor="#FF4400"
-          titleColor="#FF4400"
+          tintColor={colors.primary}
+          titleColor={colors.primary}
           onRefresh={updatePosts}
         />
       }

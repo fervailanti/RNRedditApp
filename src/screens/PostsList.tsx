@@ -38,14 +38,14 @@ const PostsList: React.FC<PostsListProps> = ({ navigation }) => {
         return (
           <Card
             bottomIndicators={[
-              { text: data.author, label: '@' },
-              { text: data.score, label: 'S' },
-              { text: data.num_comments, label: 'C' },
+              { text: data.author, icon: 'account', flex: true },
+              { text: data.score, icon: 'arrow-up-bold-outline' },
+              { text: data.num_comments, icon: 'comment-outline' },
             ]}
             imageUrl={data.thumbnail}
             key={index}
             title={data.title}
-            topIndicators={[{ text: data.created, label: 'D' }]}
+            topIndicators={[{ text: data.created, flex: true }]}
             onPress={() => goToPostDetails(data.permalink)}
           />
         )

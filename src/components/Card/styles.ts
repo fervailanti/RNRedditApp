@@ -4,8 +4,7 @@ export default StyleSheet.create({
   card: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    alignItems: 'center',
-    padding: 16,
+    padding: 12,
     marginTop: 16,
     marginHorizontal: 16,
     borderRadius: 8,
@@ -19,48 +18,52 @@ export default StyleSheet.create({
     elevation: 3,
   },
   image: {
-    height: 54,
-    width: 54,
+    height: 80,
+    width: 80,
     borderRadius: 4,
   },
   container: {
     flex: 1,
     marginLeft: 12,
+    justifyContent: 'space-between',
   },
   top: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    marginBottom: 8,
-    flex: 1,
     flexWrap: 'wrap',
+    marginBottom: 8,
   },
   bottom: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    marginTop: 8,
-    flex: 1,
     flexWrap: 'wrap',
+    marginTop: 8,
   },
-  firstIndicator: {
+  indicatorLast: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
   indicator: {
     flexDirection: 'row',
-    marginLeft: 8,
+    alignItems: 'center',
+    marginRight: 12,
   },
   indicatorLabel: {
-    fontSize: 14,
+    fontSize: 12,
     marginRight: 2,
     fontWeight: 'bold',
     color: '#999',
   },
+  indicatorIcon: {
+    marginRight: 2,
+  },
   indicatorText: {
     fontWeight: 'normal',
-    fontSize: 14,
+    fontSize: 12,
     color: '#999',
   },
   title: {
+    fontSize: 14,
+  },
+  flex: {
     flex: 1,
-    fontSize: 16,
   },
 })

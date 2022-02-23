@@ -62,6 +62,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 14,
+    color: colors.black,
   },
   flex: {
     flex: 1,

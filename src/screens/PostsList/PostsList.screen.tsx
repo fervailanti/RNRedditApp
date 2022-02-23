@@ -6,15 +6,9 @@ import { RootStackType, SCREENS } from '@navigation'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { endpoints } from '@services/axios'
 import { colors } from '@utils/colors'
-import { REFRESH_OFFSET_VARIANTS } from '@utils/constants'
 import { formatAge } from '@utils/helpers'
 import React, { useCallback, useContext, useEffect, useState } from 'react'
-import {
-  FlatList,
-  ListRenderItem,
-  Platform,
-  RefreshControl,
-} from 'react-native'
+import { FlatList, ListRenderItem, RefreshControl } from 'react-native'
 import PostsFilters from './PostsFilters'
 import { styles } from './styles'
 
@@ -68,8 +62,6 @@ const PostsList: React.FC<PostsListProps> = ({ navigation }) => {
     />
   )
 
-  const refreshOffset = REFRESH_OFFSET_VARIANTS[Platform.OS]
-
   return (
     <FlatList
       ListHeaderComponent={PostsFilters}
@@ -79,7 +71,7 @@ const PostsList: React.FC<PostsListProps> = ({ navigation }) => {
       refreshControl={
         <RefreshControl
           colors={[colors.primary]}
-          progressViewOffset={refreshOffset}
+          progressViewOffset={8}
           refreshing={loading}
           tintColor={colors.primary}
           titleColor={colors.primary}

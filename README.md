@@ -61,7 +61,7 @@ In the project directory, you can run:
 
 ## Useful Information
 
-- Subreddit can be easily modified from `src/utils/contants` in `SUBREDDIT` constant. This will affect the whole app (API calls, header title, etc).
+- Subreddit can be easily modified from `src/utils/contants` in `SUBREDDIT` constant. This will affect the whole app, including API calls and header title _(default subreddit is `r/pics`)_.
 
 - The app is available for `iOS >= 12` and `Android API >= 21`.
 
